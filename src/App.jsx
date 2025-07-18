@@ -33,7 +33,6 @@ function App() {
   <div className="app">
     <h1 className="logo">Razeather</h1>
     {!data.name ? (
-      // SHOW ONLY SEARCH CENTERED
       <div className="initial-search">
         <input
           value={location}
@@ -53,7 +52,8 @@ function App() {
             type="text"
             placeholder="Enter the Location"
           />
-        </div>
+          {error && <p className="error">{error}</p>}
+          </div>
 
         <div className="container">
           <div className="top">
